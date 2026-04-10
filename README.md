@@ -49,15 +49,23 @@ This creates a virtual environment and installs all dependencies automatically.
 python main.py <folder> [OPTIONS]
 ```
 
-| Option             | Description                                   |
-| ------------------ | --------------------------------------------- |
-| `--paragraphs`     | Split documents into paragraphs (recommended) |
-| `--headings`       | Split documents by markdown headings          |
-| `--chunk-size N`   | Split into N-character chunks                 |
-| `--top-k N`        | Documents to retrieve (default: 5)            |
-| `--metadata-boost` | Enable filename-based score boosting          |
-| `--version VER`    | Boost a specific version (e.g., `v52`)        |
-| `--max-docs N`     | Limit source documents loaded                 |
+### Arguments
+```
+positional arguments:
+  folder                Path to folder containing documents
+
+options:
+  -h, --help            show this help message and exit
+  --max-docs MAX_DOCS   Maximum number of documents to load (default: unlimited)
+  --paragraphs          Split documents into paragraphs for finer retrieval
+  --headings            Split documents by markdown headings (## level)
+  --heading-level N     Minimum heading level to split on (2=##, 3=###, default: 2)
+  --chunk-size N        Split documents into fixed-size chunks (in tokens, default: no chunking)
+  --overlap N           Number of overlapping tokens between chunks (default: 50)
+  --top-k K             Number of documents to retrieve per query (default: 5)
+  --metadata-boost      Enable metadata-based score boosting
+  --version V           Boost specific version in results (e.g. 'v52', default: latest)
+```
 
 ### Examples
 
