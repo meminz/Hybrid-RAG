@@ -6,7 +6,7 @@ A Retrieval-Augmented Generation (RAG) system that combines semantic search (emb
 
 ## RAG Workflow
 
-![RAG Workflow|720](architecture-diagram.png)
+<img src="architecture-diagram.png" width="600" alt="RAG Workflow">
 
 ## Requirements
 
