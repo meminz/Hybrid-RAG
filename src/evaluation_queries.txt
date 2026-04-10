@@ -1,0 +1,47 @@
+# Evaluation Queries for Hybrid RAG System
+#
+# Format: query | version | relevant_docs
+#
+# relevant_docs: semicolon-separated "doc_path:grade" pairs
+#   grade 2 = primary answer (the doc that directly answers the query)
+#   grade 1 = supplementary answer (related/useful but not the main answer)
+#
+# doc_path is the relative path from the version folder (e.g. Window-Rules.md)
+# The evaluator matches against the document ID containing this path.
+#
+# Ground truth: A retrieved doc is relevant if its ID contains the doc_path.
+# NDCG@K uses graded relevance (grade 2 > grade 1).
+# Recall@K = relevant_retrieved_at_K / total_relevant_docs.
+#
+# =============================================================================
+# V53 QUERIES (newer version - should be boosted by default)
+# =============================================================================
+
+how do i set a window rule | v53 | Window-Rules.md:2
+windowrule syntax | v53 | Window-Rules.md:2
+master layout configuration | v53 | Master-Layout.md:2
+environment variables | v53 | Environment-variables.md:2
+how to configure keybinds | v53 | Binds.md:2
+how to set up multiple monitors | v53 | Monitors.md:2;Dispatchers.md:1
+how to enable animations | v53 | Animations.md:2;Variables.md:1
+how to set up screen sharing | v53 | Screen-Sharing.md:2
+how to configure status bars | v53 | Status-Bars.md:2
+how to set wallpaper | v53 | Wallpapers.md:2
+how to install hyprland | v53 | Installation.md:2
+how to configure tearing | v53 | Tearing.md:2
+how to fix pixelated apps | v53 | FAQ.md:2;XWayland.md:1
+how to configure hyprlock | v53 | hyprlock.md:2
+
+# =============================================================================
+# V52 QUERIES (older version - test explicit version retrieval)
+# =============================================================================
+
+hyprland 52 window rules | v52 | Window-Rules.md:2
+windowrule v0.52 syntax | v52 | Window-Rules.md:2
+hyprland v52 master layout | v52 | Master-Layout.md:2
+hyprland 52 environment variables | v52 | Environment-variables.md:2
+hyprland 52 keybinds | v52 | Binds.md:2
+hyprland v52 multiple monitors | v52 | Monitors.md:2;Dispatchers.md:1
+hyprland v52 animations | v52 | Animations.md:2;Variables.md:1
+hyprland 52 screen sharing | v52 | Screen-Sharing.md:2
+hyprland v52 status bars | v52 | Status-Bars.md:2
