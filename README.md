@@ -83,4 +83,4 @@ The system uses a dual-path retrieval approach:
 2. **BM25 keyword search** — With configurable K1/B parameters
 3. **Reciprocal Rank Fusion** — Weights: 0.7 embedding + 0.3 BM25, k=60
 
-See [src/architecture.md](architecture.md) for the full technical documentation.
+See [architecture.md](description/architecture.md) for the full technical documentation.
